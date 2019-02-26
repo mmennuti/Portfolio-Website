@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio",
+  "description": "Portfolio Website",
+  "version": "1.0.0",
+  "main": "portfolio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmennuti/Portfolio-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmennuti/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/mmennuti/Portfolio-Website#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "prop-types": "^15.7.2"
+  }
+}
