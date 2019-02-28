@@ -34,6 +34,11 @@ var Header = function (_React$Component) {
             "h1",
             null,
             "Michael Mennuti"
+          ),
+          React.createElement(
+            "em",
+            null,
+            "\"This page is under construction...\""
           )
         )
       );

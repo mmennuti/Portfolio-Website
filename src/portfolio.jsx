@@ -14,6 +14,7 @@ class Header extends React.Component {
         />
         <div>
           <h1>Michael Mennuti</h1>
+          <em>"This page is under construction..."</em>
         </div>
       </div>
     )
