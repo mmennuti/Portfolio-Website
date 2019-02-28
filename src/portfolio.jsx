@@ -1,3 +1,5 @@
+// This is the header with the page's title, and a self portrait.
+// Todo: Add theme selection
 class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -18,6 +20,7 @@ class Header extends React.Component {
   }
 }
 
+// This is a tab managing component. It contains one or more Panes, each of which with a label and some content.
 class Tabs extends React.Component {
   constructor(props) {
     super(props)
@@ -74,6 +77,8 @@ class Tabs extends React.Component {
   }
 }
 
+// This component represents one pane that a tab activates.
+// Todo: Add a gallery component
 class Pane extends React.Component {
   constructor(props) {
     super(props)
@@ -84,6 +89,7 @@ class Pane extends React.Component {
   }
 }
 
+// This is the markup for the text of the development pane.
 var textDevelopment = (
   <div>
     <p>
@@ -99,6 +105,8 @@ var textDevelopment = (
     </p>
   </div>
 )
+
+// This is the markup for the text of the design pane.
 var textDesign = (
   <div>
     <p>
@@ -108,6 +116,8 @@ var textDesign = (
     </p>
   </div>
 )
+
+// This is the markup for the text of the illustration pane.
 var textIllustration = (
   <div>
     <p>I like to draw</p>

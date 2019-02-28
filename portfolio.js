@@ -6,6 +6,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// This is the header with the page's title, and a self portrait.
+// Todo: Add theme selection
 var Header = function (_React$Component) {
   _inherits(Header, _React$Component);
 
@@ -40,6 +42,9 @@ var Header = function (_React$Component) {
 
   return Header;
 }(React.Component);
+
+// This is a tab managing component. It contains one or more Panes, each of which with a label and some content.
+
 
 var Tabs = function (_React$Component2) {
   _inherits(Tabs, _React$Component2);
@@ -113,6 +118,10 @@ var Tabs = function (_React$Component2) {
   return Tabs;
 }(React.Component);
 
+// This component represents one pane that a tab activates.
+// Todo: Add a gallery component
+
+
 var Pane = function (_React$Component3) {
   _inherits(Pane, _React$Component3);
 
@@ -136,6 +145,9 @@ var Pane = function (_React$Component3) {
   return Pane;
 }(React.Component);
 
+// This is the markup for the text of the development pane.
+
+
 var textDevelopment = React.createElement(
   "div",
   null,
@@ -150,6 +162,8 @@ var textDevelopment = React.createElement(
     "After I graduated with my B.S. in computer Science, I moved to Madison, Wisconsin to work at Epic, the leading electronic health record vendor. I worked there for seven years, designing and developing reporting and analytics software for medical organizations."
   )
 );
+
+// This is the markup for the text of the design pane.
 var textDesign = React.createElement(
   "div",
   null,
@@ -159,6 +173,8 @@ var textDesign = React.createElement(
     "During my studies in game design, and as a professional software developer, I've had the opportunity to develop my skills in user experience and graphic design."
   )
 );
+
+// This is the markup for the text of the illustration pane.
 var textIllustration = React.createElement(
   "div",
   null,
