@@ -22,18 +22,18 @@ var Header = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        { className: "header" },
+        { id: "header" },
         React.createElement("img", {
           src: "./media/portrait.jpg",
           alt: "Self portrait of Michael Mennuti",
-          className: "portrait"
+          id: "portrait"
         }),
         React.createElement(
           "div",
-          { className: "topright" },
+          { id: "topright" },
           React.createElement(
             "h1",
-            { className: "headerText" },
+            { id: "headerText" },
             "Michael Mennuti"
           ),
           React.createElement(
@@ -81,10 +81,14 @@ var Tabs = function (_React$Component2) {
         var activeClass = this.state.activeTab === index ? "active" : "";
         return React.createElement(
           "li",
-          { key: index, className: activeClass },
+          { key: index },
           React.createElement(
             "a",
-            { href: "#", onClick: this.selectTab.bind(this, index) },
+            {
+              href: "#",
+              onClick: this.selectTab.bind(this, index),
+              className: activeClass
+            },
             child.props.label
           )
         );
@@ -150,34 +154,38 @@ var Pane = function (_React$Component3) {
 // Technologies I've used are in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
 
 
-var technologies = ["C#", "VisualBasic 6", "M(UMPS)", "Microsoft SQL Server", "ASP.NET", "WebForms", "JavaScript", "TypeScript", "jQuery", "AJAX React.js", "HTML5", "CSS3", "SCSS", "Unity3D", "C++", "OpenGL", "Java", "Python", "C", "SVN", "git"];
+var technologies = ["C#", "VisualBasic 6", "M(UMPS)", "Microsoft SQL Server", "ASP.NET", "WebForms", "JavaScript", "TypeScript", "jQuery", "AJAX", "HTML5", "CSS3", "SCSS", "SVN"];
 
-var techList = technologies.map(function (tech, index) {
-  return React.createElement(
-    "li",
-    { key: index },
-    tech
-  );
-});
+var hobbyTechs = ["Unity3D", "C++", "OpenGL", "Java", "Python", "C", "Git", "React.js", "UnrealScript", "Datalog", "Perl"];
+
+function List(techArray) {
+  return techArray.map(function (tech, index) {
+    return React.createElement(
+      "li",
+      { key: index },
+      tech
+    );
+  });
+}
 
 // Markup for the text of the development pane.
 var textDevelopment = React.createElement(
   "div",
-  null,
+  { "class": "text" },
   React.createElement(
     "p",
     null,
-    "I have been making software for about eleven years now. I studied computer science and game design at the Jack Baskin School of Engineering at the University of California, Santa Cruz."
+    "I have been making software for about eleven years now. I studied computer science and game design at the Jack Baskin School of Engineering at the University of California, Santa Cruz from 2007 to 2011, graduating with a B.S. in computer science and a focus in computer game design."
   ),
   React.createElement(
     "p",
     null,
-    "After I graduated with my B.S. in computer Science, I moved to Madison, Wisconsin to work at Epic, the leading electronic health record vendor. I worked there for seven years, designing and developing reporting and analytics software for medical organizations. I particularly specialized in integration projects, linking functionality between our various reporting tools, but I've also worked on backend database work, web services, front end implementation, and various sorts of optimization."
+    "After I graduated, I moved to the frigid north--Madison, Wisconsin, to be specific--to work at Epic, the leading electronic health record vendor. I worked there for seven years, designing and developing reporting and analytics software for medical organizations. I particularly specialized in integration projects, linking functionality between our various reporting tools, but I've also worked on backend database work, web services, front end implementation, and various sorts of optimization."
   ),
   React.createElement(
     "p",
     null,
-    "Some of the technologies I've used include:"
+    "I've used a variety of technologies in my professional work:"
   ),
   React.createElement(
     "p",
@@ -185,7 +193,21 @@ var textDevelopment = React.createElement(
     React.createElement(
       "ul",
       null,
-      techList
+      List(technologies)
+    )
+  ),
+  React.createElement(
+    "p",
+    null,
+    "I've also dabbled in these other technologies in my own time or when I was in school:"
+  ),
+  React.createElement(
+    "p",
+    null,
+    React.createElement(
+      "ul",
+      null,
+      List(hobbyTechs)
     )
   )
 );
@@ -193,7 +215,7 @@ var textDevelopment = React.createElement(
 // Markup for the text of the design pane.
 var textDesign = React.createElement(
   "div",
-  null,
+  { "class": "text" },
   React.createElement(
     "p",
     null,
@@ -209,7 +231,7 @@ var textDesign = React.createElement(
 // Markup for the text of the illustration pane.
 var textIllustration = React.createElement(
   "div",
-  null,
+  { "class": "text" },
   React.createElement(
     "p",
     null,
@@ -231,7 +253,7 @@ var App = function (_React$Component4) {
     value: function render() {
       return React.createElement(
         "div",
-        null,
+        { id: "appBody" },
         React.createElement(Header, null),
         React.createElement(
           Tabs,

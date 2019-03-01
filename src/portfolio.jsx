@@ -7,15 +7,15 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="header">
+      <div id="header">
         <img
           src="./media/portrait.jpg"
           alt="Self portrait of Michael Mennuti"
-          className="portrait"
+          id="portrait"
         />
 
-        <div className="topright">
-          <h1 className="headerText">Michael Mennuti</h1>
+        <div id="topright">
+          <h1 id="headerText">Michael Mennuti</h1>
           <em>"This page is under construction..."</em>
         </div>
       </div>
@@ -43,8 +43,12 @@ class Tabs extends React.Component {
     function labels(child, index) {
       let activeClass = this.state.activeTab === index ? "active" : ""
       return (
-        <li key={index} className={activeClass}>
-          <a href="#" onClick={this.selectTab.bind(this, index)}>
+        <li key={index}>
+          <a
+            href="#"
+            onClick={this.selectTab.bind(this, index)}
+            className={activeClass}
+          >
             {child.props.label}
           </a>
         </li>
@@ -99,49 +103,66 @@ const technologies = [
   "JavaScript",
   "TypeScript",
   "jQuery",
-  "AJAX React.js",
+  "AJAX",
   "HTML5",
   "CSS3",
   "SCSS",
+  "SVN"
+]
+
+const hobbyTechs = [
   "Unity3D",
   "C++",
   "OpenGL",
   "Java",
   "Python",
   "C",
-  "SVN",
-  "git"
+  "Git",
+  "React.js",
+  "UnrealScript",
+  "Datalog",
+  "Perl"
 ]
 
-const techList = technologies.map((tech, index) => <li key={index}>{tech}</li>)
+function List(techArray) {
+  return techArray.map((tech, index) => <li key={index}>{tech}</li>)
+}
 
 // Markup for the text of the development pane.
 const textDevelopment = (
-  <div>
+  <div class="text">
     <p>
       I have been making software for about eleven years now. I studied computer
       science and game design at the Jack Baskin School of Engineering at the
-      University of California, Santa Cruz.
+      University of California, Santa Cruz from 2007 to 2011, graduating with a
+      B.S. in computer science and a focus in computer game design.
     </p>
     <p>
-      After I graduated with my B.S. in computer Science, I moved to Madison,
-      Wisconsin to work at Epic, the leading electronic health record vendor. I
+      After I graduated, I moved to the frigid north--Madison, Wisconsin, to be
+      specific--to work at Epic, the leading electronic health record vendor. I
       worked there for seven years, designing and developing reporting and
       analytics software for medical organizations. I particularly specialized
       in integration projects, linking functionality between our various
       reporting tools, but I've also worked on backend database work, web
       services, front end implementation, and various sorts of optimization.
     </p>
-    <p>Some of the technologies I've used include:</p>
+    <p>I've used a variety of technologies in my professional work:</p>
     <p>
-      <ul>{techList}</ul>
+      <ul>{List(technologies)}</ul>
+    </p>
+    <p>
+      I've also dabbled in these other technologies in my own time or when I was
+      in school:
+    </p>
+    <p>
+      <ul>{List(hobbyTechs)}</ul>
     </p>
   </div>
 )
 
 // Markup for the text of the design pane.
 const textDesign = (
-  <div>
+  <div class="text">
     <p>
       During my studies in game design, and as a professional software
       developer, I've had the opportunity to develop skills in user experience
@@ -164,7 +185,7 @@ const textDesign = (
 
 // Markup for the text of the illustration pane.
 const textIllustration = (
-  <div>
+  <div class="text">
     <p>
       For as long as I can remember I've loved to draw, paint, sculpt, really
       create any visual media. When I learned I was colorblind, I was
@@ -180,7 +201,7 @@ const textIllustration = (
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div id="appBody">
         <Header />
         <Tabs activeTab={0}>
           <Pane label="Development">{textDevelopment}</Pane>
