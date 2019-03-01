@@ -7,13 +7,15 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="header">
         <img
           src="./media/portrait.jpg"
           alt="Self portrait of Michael Mennuti"
+          className="portrait"
         />
-        <div>
-          <h1>Michael Mennuti</h1>
+
+        <div className="topright">
+          <h1 className="headerText">Michael Mennuti</h1>
           <em>"This page is under construction..."</em>
         </div>
       </div>
@@ -41,12 +43,8 @@ class Tabs extends React.Component {
     function labels(child, index) {
       let activeClass = this.state.activeTab === index ? "active" : ""
       return (
-        <li key={index}>
-          <a
-            href="#"
-            className={activeClass}
-            onClick={this.selectTab.bind(this, index)}
-          >
+        <li key={index} className={activeClass}>
+          <a href="#" onClick={this.selectTab.bind(this, index)}>
             {child.props.label}
           </a>
         </li>
@@ -90,7 +88,7 @@ class Pane extends React.Component {
   }
 }
 
-// Put this in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
+// Technologies I've used are in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
 const technologies = [
   "C#",
   "VisualBasic 6",
@@ -117,7 +115,7 @@ const technologies = [
 
 const techList = technologies.map((tech, index) => <li key={index}>{tech}</li>)
 
-// This is the markup for the text of the development pane.
+// Markup for the text of the development pane.
 const textDevelopment = (
   <div>
     <p>
@@ -133,15 +131,15 @@ const textDevelopment = (
       in integration projects, linking functionality between our various
       reporting tools, but I've also worked on backend database work, web
       services, front end implementation, and various sorts of optimization.
-      <p>Some of the technologies I've used include:</p>
-      <p>
-        <ul>{techList}</ul>
-      </p>
+    </p>
+    <p>Some of the technologies I've used include:</p>
+    <p>
+      <ul>{techList}</ul>
     </p>
   </div>
 )
 
-// This is the markup for the text of the design pane.
+// Markup for the text of the design pane.
 const textDesign = (
   <div>
     <p>
@@ -164,7 +162,7 @@ const textDesign = (
   </div>
 )
 
-// This is the markup for the text of the illustration pane.
+// Markup for the text of the illustration pane.
 const textIllustration = (
   <div>
     <p>

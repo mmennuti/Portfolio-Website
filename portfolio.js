@@ -22,17 +22,18 @@ var Header = function (_React$Component) {
     value: function render() {
       return React.createElement(
         "div",
-        null,
+        { className: "header" },
         React.createElement("img", {
           src: "./media/portrait.jpg",
-          alt: "Self portrait of Michael Mennuti"
+          alt: "Self portrait of Michael Mennuti",
+          className: "portrait"
         }),
         React.createElement(
           "div",
-          null,
+          { className: "topright" },
           React.createElement(
             "h1",
-            null,
+            { className: "headerText" },
             "Michael Mennuti"
           ),
           React.createElement(
@@ -80,14 +81,10 @@ var Tabs = function (_React$Component2) {
         var activeClass = this.state.activeTab === index ? "active" : "";
         return React.createElement(
           "li",
-          { key: index },
+          { key: index, className: activeClass },
           React.createElement(
             "a",
-            {
-              href: "#",
-              className: activeClass,
-              onClick: this.selectTab.bind(this, index)
-            },
+            { href: "#", onClick: this.selectTab.bind(this, index) },
             child.props.label
           )
         );
@@ -150,7 +147,7 @@ var Pane = function (_React$Component3) {
   return Pane;
 }(React.Component);
 
-// Put this in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
+// Technologies I've used are in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
 
 
 var technologies = ["C#", "VisualBasic 6", "M(UMPS)", "Microsoft SQL Server", "ASP.NET", "WebForms", "JavaScript", "TypeScript", "jQuery", "AJAX React.js", "HTML5", "CSS3", "SCSS", "Unity3D", "C++", "OpenGL", "Java", "Python", "C", "SVN", "git"];
@@ -163,7 +160,7 @@ var techList = technologies.map(function (tech, index) {
   );
 });
 
-// This is the markup for the text of the development pane.
+// Markup for the text of the development pane.
 var textDevelopment = React.createElement(
   "div",
   null,
@@ -175,25 +172,25 @@ var textDevelopment = React.createElement(
   React.createElement(
     "p",
     null,
-    "After I graduated with my B.S. in computer Science, I moved to Madison, Wisconsin to work at Epic, the leading electronic health record vendor. I worked there for seven years, designing and developing reporting and analytics software for medical organizations. I particularly specialized in integration projects, linking functionality between our various reporting tools, but I've also worked on backend database work, web services, front end implementation, and various sorts of optimization.",
+    "After I graduated with my B.S. in computer Science, I moved to Madison, Wisconsin to work at Epic, the leading electronic health record vendor. I worked there for seven years, designing and developing reporting and analytics software for medical organizations. I particularly specialized in integration projects, linking functionality between our various reporting tools, but I've also worked on backend database work, web services, front end implementation, and various sorts of optimization."
+  ),
+  React.createElement(
+    "p",
+    null,
+    "Some of the technologies I've used include:"
+  ),
+  React.createElement(
+    "p",
+    null,
     React.createElement(
-      "p",
+      "ul",
       null,
-      "Some of the technologies I've used include:"
-    ),
-    React.createElement(
-      "p",
-      null,
-      React.createElement(
-        "ul",
-        null,
-        techList
-      )
+      techList
     )
   )
 );
 
-// This is the markup for the text of the design pane.
+// Markup for the text of the design pane.
 var textDesign = React.createElement(
   "div",
   null,
@@ -209,7 +206,7 @@ var textDesign = React.createElement(
   )
 );
 
-// This is the markup for the text of the illustration pane.
+// Markup for the text of the illustration pane.
 var textIllustration = React.createElement(
   "div",
   null,
