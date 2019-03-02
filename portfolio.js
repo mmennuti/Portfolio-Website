@@ -154,7 +154,7 @@ var Pane = function (_React$Component3) {
 // Technologies I've used are in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
 
 
-var technologies = ["C#", "VisualBasic 6", "M(UMPS)", "Microsoft SQL Server", "ASP.NET", "WebForms", "JavaScript", "TypeScript", "jQuery", "AJAX", "HTML5", "CSS3", "SCSS", "SVN"];
+var technologies = ["C#", "ASP.NET", "WebForms", "JavaScript", "TypeScript", "jQuery", "AJAX", "HTML5", "CSS3", "SCSS", "Microsoft SQL Server", "VisualBasic 6", "M(UMPS)", "SVN"];
 
 var hobbyTechs = ["Unity3D", "C++", "OpenGL", "Java", "Python", "C", "Git", "React.js", "UnrealScript", "Datalog", "Perl"];
 
@@ -175,7 +175,7 @@ var textDevelopment = React.createElement(
   React.createElement(
     "p",
     null,
-    "I have been making software for about eleven years now. I studied computer science and game design at the Jack Baskin School of Engineering at the University of California, Santa Cruz from 2007 to 2011, graduating with a B.S. in computer science and a focus in computer game design."
+    "I have been making software for more than eleven years now. I studied computer science and game design at the Jack Baskin School of Engineering at the University of California, Santa Cruz from 2007 to 2011, graduating with a B.S. in computer science and a focus in computer game design."
   ),
   React.createElement(
     "p",
@@ -185,28 +185,20 @@ var textDevelopment = React.createElement(
   React.createElement(
     "p",
     null,
-    "I've used a variety of technologies in my professional work:"
-  ),
-  React.createElement(
-    "p",
-    null,
+    "I've used a variety of technologies in my professional work:",
     React.createElement(
       "ul",
-      null,
+      { className: "techs" },
       List(technologies)
     )
   ),
   React.createElement(
     "p",
     null,
-    "I've also dabbled in these other technologies in my own time or when I was in school:"
-  ),
-  React.createElement(
-    "p",
-    null,
+    "I've also dabbled in these other technologies in my own time or when I was in school:",
     React.createElement(
       "ul",
-      null,
+      { className: "techs" },
       List(hobbyTechs)
     )
   )

@@ -95,9 +95,6 @@ class Pane extends React.Component {
 // Technologies I've used are in an array to make it easier to edit later. Could eventually pull from some sort of database, but that seems like overkill unless I start adding details to each.
 const technologies = [
   "C#",
-  "VisualBasic 6",
-  "M(UMPS)",
-  "Microsoft SQL Server",
   "ASP.NET",
   "WebForms",
   "JavaScript",
@@ -107,6 +104,9 @@ const technologies = [
   "HTML5",
   "CSS3",
   "SCSS",
+  "Microsoft SQL Server",
+  "VisualBasic 6",
+  "M(UMPS)",
   "SVN"
 ]
 
@@ -132,10 +132,10 @@ function List(techArray) {
 const textDevelopment = (
   <div class="text">
     <p>
-      I have been making software for about eleven years now. I studied computer
-      science and game design at the Jack Baskin School of Engineering at the
-      University of California, Santa Cruz from 2007 to 2011, graduating with a
-      B.S. in computer science and a focus in computer game design.
+      I have been making software for more than eleven years now. I studied
+      computer science and game design at the Jack Baskin School of Engineering
+      at the University of California, Santa Cruz from 2007 to 2011, graduating
+      with a B.S. in computer science and a focus in computer game design.
     </p>
     <p>
       After I graduated, I moved to the frigid north--Madison, Wisconsin, to be
@@ -146,16 +146,14 @@ const textDevelopment = (
       reporting tools, but I've also worked on backend database work, web
       services, front end implementation, and various sorts of optimization.
     </p>
-    <p>I've used a variety of technologies in my professional work:</p>
     <p>
-      <ul>{List(technologies)}</ul>
+      I've used a variety of technologies in my professional work:
+      <ul className="techs">{List(technologies)}</ul>
     </p>
     <p>
       I've also dabbled in these other technologies in my own time or when I was
       in school:
-    </p>
-    <p>
-      <ul>{List(hobbyTechs)}</ul>
+      <ul className="techs">{List(hobbyTechs)}</ul>
     </p>
   </div>
 )
