@@ -65,6 +65,10 @@ ul.tabs__labels li a:hover {
   margin-block-start: 0em;
 }
 
+.text div {
+  margin-block-start: 1em;
+}
+
 ul.techs {
   margin: 0;
 }
@@ -76,6 +80,7 @@ ul.techs {
 
 #portrait {
   height: 250px;
+  width: 250px;
 }
 
 #topright {

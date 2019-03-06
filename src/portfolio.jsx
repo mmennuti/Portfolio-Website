@@ -130,7 +130,7 @@ function List(techArray) {
 
 // Markup for the text of the development pane.
 const textDevelopment = (
-  <div class="text">
+  <div className="text">
     <p>
       I have been making software for more than eleven years now. I studied
       computer science and game design at the Jack Baskin School of Engineering
@@ -146,21 +146,21 @@ const textDevelopment = (
       reporting tools, but I've also worked on backend database work, web
       services, front end implementation, and various sorts of optimization.
     </p>
-    <p>
+    <div>
       I've used a variety of technologies in my professional work:
       <ul className="techs">{List(technologies)}</ul>
-    </p>
-    <p>
+    </div>
+    <div>
       I've also dabbled in these other technologies in my own time or when I was
       in school:
       <ul className="techs">{List(hobbyTechs)}</ul>
-    </p>
+    </div>
   </div>
 )
 
 // Markup for the text of the design pane.
 const textDesign = (
-  <div class="text">
+  <div className="text">
     <p>
       During my studies in game design, and as a professional software
       developer, I've had the opportunity to develop skills in user experience
@@ -183,7 +183,7 @@ const textDesign = (
 
 // Markup for the text of the illustration pane.
 const textIllustration = (
-  <div class="text">
+  <div className="text">
     <p>
       For as long as I can remember I've loved to draw, paint, sculpt, really
       create any visual media. When I learned I was colorblind, I was

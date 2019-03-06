@@ -171,7 +171,7 @@ function List(techArray) {
 // Markup for the text of the development pane.
 var textDevelopment = React.createElement(
   "div",
-  { "class": "text" },
+  { className: "text" },
   React.createElement(
     "p",
     null,
@@ -183,7 +183,7 @@ var textDevelopment = React.createElement(
     "After I graduated, I moved to the frigid north--Madison, Wisconsin, to be specific--to work at Epic, the leading electronic health record vendor. I worked there for seven years, designing and developing reporting and analytics software for medical organizations. I particularly specialized in integration projects, linking functionality between our various reporting tools, but I've also worked on backend database work, web services, front end implementation, and various sorts of optimization."
   ),
   React.createElement(
-    "p",
+    "div",
     null,
     "I've used a variety of technologies in my professional work:",
     React.createElement(
@@ -193,7 +193,7 @@ var textDevelopment = React.createElement(
     )
   ),
   React.createElement(
-    "p",
+    "div",
     null,
     "I've also dabbled in these other technologies in my own time or when I was in school:",
     React.createElement(
@@ -207,7 +207,7 @@ var textDevelopment = React.createElement(
 // Markup for the text of the design pane.
 var textDesign = React.createElement(
   "div",
-  { "class": "text" },
+  { className: "text" },
   React.createElement(
     "p",
     null,
@@ -223,7 +223,7 @@ var textDesign = React.createElement(
 // Markup for the text of the illustration pane.
 var textIllustration = React.createElement(
   "div",
-  { "class": "text" },
+  { className: "text" },
   React.createElement(
     "p",
     null,
